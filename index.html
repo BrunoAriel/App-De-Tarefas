@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="fundo">
+    <div class="folha">
+
+      <h1>💖 TAREFAS 💖</h1>
+
+      <h2>Pontos: <span id="pontos">0</span></h2>
+
+      <!-- XP -->
+      <h3>Nível: <span id="nivel">1</span></h3>
+
+      <div class="xp-bar">
+        <div class="xp-fill" id="xpFill"></div>
+      </div>
+
+      <p><span id="xpAtual">0</span> / <span id="xpMax">10</span> XP
+      <button onclick="resetarProgresso()">💀 Resetar Tudo</button> </p>
+      <!-- input -->
+      <input type="text" id="tarefaInput" placeholder="Digite uma tarefa">
+
+      <label>
+        <input type="checkbox" id="repetir">
+        Repetir todo dia 🔁
+      </label>
+
+      <button onclick="adicionarTarefa()">Adicionar</button>
+
+      <ul id="lista"></ul>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
