@@ -15,8 +15,9 @@ body {
 /* folha */
 .folha {
   background: #fff;
-  width: 320px;
-  height: 650px;
+  width: 90%;
+  max-width: 400px;
+  height: 90vh;
   border-radius: 25px;
   padding: 20px;
   position: relative;
@@ -89,7 +90,8 @@ button {
 ul {
   margin-top: 40px;
   padding: 0;
-  height: 300px;
+  flex: 1;
+
   overflow-y: auto;
 
   background-image: repeating-linear-gradient(
@@ -139,4 +141,23 @@ li {
 .feita .texto {
   text-decoration: line-through;
   color: #aaa;
+}
+
+
+
+/* melhora no celular */
+/* 
+input, button {
+  width: 100%;
+  font-size: 16px;
+}
+ */
+
+button {
+  padding: 10px;
+}
+
+/* evita zoom automático no iPhone */
+input {
+  font-size: 16px;
 }
