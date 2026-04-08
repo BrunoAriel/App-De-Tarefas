@@ -121,6 +121,8 @@ function renderizarTarefas() {
           ${tarefa.feitaHoje ? "✅" : "⬜"}
         </span>
         <span class="texto">${tarefa.texto}</span>
+		<button onclick="concluir(${index})">✔</button>
+        <button onclick="falhar(${index})">❌</button>
       </div>
 
       <div class="linha-baixo">
@@ -128,8 +130,7 @@ function renderizarTarefas() {
       </div>
 
       <div class="acoes">
-        <button onclick="concluir(${index})">✔</button>
-        <button onclick="falhar(${index})">❌</button>
+        
       </div>
     `;
 

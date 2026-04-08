@@ -87,7 +87,7 @@ button {
 
 /* lista */
 ul {
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 0;
   height: 300px;
   overflow-y: auto;
@@ -103,7 +103,7 @@ ul {
 /* item */
 li {
   list-style: none;
-  height: 65px;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
