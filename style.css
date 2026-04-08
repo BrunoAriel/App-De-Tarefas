@@ -18,11 +18,16 @@ body {
   width: 90%;
   max-width: 400px;
   height: 90vh;
+	
+  display: flex;
+  flex-direction: column;	
+	
   border-radius: 25px;
   padding: 20px;
   position: relative;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   overflow: hidden;
+	
 }
 
 /* borda */
@@ -91,7 +96,7 @@ ul {
   margin-top: 40px;
   padding: 0;
   flex: 1;
-
+  -webkit-overflow-scrolling: touch;
   overflow-y: auto;
 
   background-image: repeating-linear-gradient(
