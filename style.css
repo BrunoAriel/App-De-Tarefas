@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Comic Sans MS', cursive;
 }
 
 /* fundo */
@@ -109,7 +109,7 @@ ul {
 
 /* item */
 li {
-  font-family: 'Segoe UI', sans-serif;
+   font-family: 'Segoe UI', sans-serif;
   list-style: none;
   height: 70px;
   display: flex;

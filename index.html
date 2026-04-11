@@ -24,10 +24,35 @@
 
       <p><span id="xpAtual">0</span> / <span id="xpMax">10</span> XP
       <button onclick="resetarProgresso()">💀 Resetar Tudo</button> </p>
+		
+		
+		
+		
+		
+	  <div >
+        <button onclick="exportarDados()">📥 Exportar Dados</button>
+        <button onclick="document.getElementById('importFile').click()">📤 Importar Dados</button>
+		  
+       </div>
+		
+		
+	   <input type="file" id="importFile" style="display:none" onchange="importarArquivo(event)">
+	
+		
+		<!--  Import com colar
+		<textarea id="importTexto" placeholder="Cole aqui os dados"></textarea>
+        <button onclick="importarTexto()">📋 Colar Dados</button>
+		-->
+		
+		
       <!-- input -->
+		
+		
+		
       <input type="text" id="tarefaInput" placeholder="Digite uma tarefa">
 
       <label>
+		  
         <input type="checkbox" id="repetir">
         Repetir todo dia 🔁
       </label>

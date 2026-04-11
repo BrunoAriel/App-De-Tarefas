@@ -188,6 +188,79 @@ function falhar(index) {
   atualizarTudo();
 }
 
+
+function exportarDados() {
+  const dados = {
+    pontos,
+    tarefas,
+    ultimoDia,
+    xp,
+    nivel
+  };
+
+  const json = JSON.stringify(dados, null, 2);
+
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "backup-tarefas.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
+function importarArquivo(event) {
+  const arquivo = event.target.files[0];
+
+  if (!arquivo) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    try {
+      const dados = JSON.parse(e.target.result);
+
+      pontos = dados.pontos || 0;
+      tarefas = dados.tarefas || [];
+      ultimoDia = dados.ultimoDia || getHoje();
+      xp = dados.xp || 0;
+      nivel = dados.nivel || 1;
+
+      salvarDados();
+      atualizarTudo();
+
+      alert("? Dados importados com sucesso!");
+    } catch {
+      alert("? Erro ao importar arquivo!");
+    }
+  };
+
+  reader.readAsText(arquivo);
+}
+
+
+function importarTexto() {
+  try {
+    const texto = document.getElementById("importTexto").value;
+    const dados = JSON.parse(texto);
+
+    pontos = dados.pontos || 0;
+    tarefas = dados.tarefas || [];
+    ultimoDia = dados.ultimoDia || getHoje();
+    xp = dados.xp || 0;
+    nivel = dados.nivel || 1;
+
+    salvarDados();
+    atualizarTudo();
+
+    alert("? Importado!");
+  } catch {
+    alert("? JSON inválido!");
+  }
+}
+
 // start
 carregarDados();
 
